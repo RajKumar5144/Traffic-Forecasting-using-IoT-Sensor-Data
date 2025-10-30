@@ -1,22 +1,91 @@
-Traffic Forecasting using IoT Sensor Data
-Context
-You are working with the government to transform your city into a smart city. The vision is to convert it into a digital and intelligent city to improve the efficiency of services for the citizens. One of the problems faced by the government is traffic. You are a data scientist working to manage the traffic of the city better and to provide input on infrastructure planning for the future.
+# 🚦 Traffic Forecasting using IoT Sensor Data
 
-The government wants to implement a robust traffic system for the city by being prepared for traffic peaks. They want to understand the traffic patterns of the four junctions of the city. Traffic patterns on holidays, as well as on various other occasions during the year, differ from normal working days. This is important to take into account for your forecasting.
+## 🧠 Project Overview
+This project focuses on **predicting future traffic patterns** across four major junctions in a city using **IoT sensor data**.  
+The goal is to support the government’s **Smart City** initiative by providing accurate traffic forecasts for better infrastructure and congestion management.
 
-Content
-To predict traffic patterns in each of these four junctions for the next 4 months.
+By analyzing **20 months of historical traffic data**, the objective is to forecast the **number of vehicles** for the **next 4 months**.
 
-The sensors on each of these junctions were collecting data at different times, hence you will see traffic data from different time periods. To add to the complexity, some of the junctions have provided limited or sparse data requiring thoughtfulness when creating future projections. Depending upon the historical data of 20 months, the government is looking to you to deliver accurate traffic projections for the coming four months. Your algorithm will become the foundation of a larger transformation to make your city smart and intelligent.
+---
 
-Dataset Link: https://www.kaggle.com/datasets/vetrirah/ml-iot/data
+## 📍 Context
+The government aims to transform the city into a **digital and intelligent ecosystem**. One major challenge is traffic congestion.  
+You are part of the data science team responsible for developing a **robust traffic forecasting model**.
 
-Variable Information
-ID : Unique IDs for each reading
+Traffic patterns vary significantly due to:
+- Holidays and festivals  
+- Weekdays vs. weekends  
+- Seasonal and temporal variations  
 
-DateTime : Date and Time in hourly interval
+These factors are important to consider while building the forecasting model.
 
-Junction : Junction Number (Observation collected)
+---
 
-Vehicles : Number of Vehicles (Target)
+## 📂 Dataset
+**Source:** [Kaggle - ML IoT Traffic Data](https://www.kaggle.com/datasets/vetrirah/ml-iot/data)
 
+### Variable Description
+| Column Name | Description |
+|--------------|-------------|
+| `ID` | Unique ID for each reading |
+| `DateTime` | Timestamp in hourly intervals |
+| `Junction` | Junction number (1–4) |
+| `Vehicles` | Number of vehicles (Target variable) |
+
+> Note: Each junction’s data is recorded for different time periods, and some datasets are sparse or incomplete.
+
+---
+
+## 🎯 Objective
+To **forecast the number of vehicles** passing through each of the four junctions for the **next 4 months** using machine learning techniques.
+
+---
+
+## 🧩 Approach
+
+1. **Data Preprocessing**
+   - Handled missing and sparse data  
+   - Extracted time-based features (`Year`, `Month`, `WeekOfYear`, `DayOfWeek`, `Hour`, etc.)  
+   - Scaled and structured data for time-series analysis  
+
+2. **Exploratory Data Analysis (EDA)**
+   - Visualized traffic patterns and trends  
+   - Compared junction-wise vehicle counts  
+   - Identified peak hours and seasonal effects  
+
+3. **Model Building**
+   - Implemented models like **Random Forest**, **XGBoost**, and **RFE-based feature selection**  
+   - Performed hyperparameter tuning using **GridSearchCV**  
+
+4. **Evaluation**
+   - Evaluated models using **RMSE**, **MAE**, and **R² Score**  
+   - Compared actual vs predicted traffic trends  
+
+---
+
+## 📊 Tools & Technologies
+- **Python** 🐍  
+- **Pandas**, **NumPy** – Data handling  
+- **Matplotlib**, **Seaborn** – Visualization  
+- **Scikit-learn**, **XGBoost** – Machine Learning  
+- **Jupyter Notebook / VS Code** – Development environment  
+
+---
+
+## 🚀 Results
+- Built accurate predictive models for all four junctions.  
+- Successfully forecasted traffic volume for the next 4 months.  
+- Identified meaningful temporal traffic patterns useful for city planning.  
+
+---
+
+## 📅 Future Scope
+- Integrate external data such as **weather** or **public events**.  
+- Experiment with **LSTM/ARIMA** for advanced time-series modeling.  
+- Deploy the model for **real-time traffic monitoring**.  
+
+---
+
+## 👨‍💻 Author
+**Raj Kumar**  
+NIT Warangal | Data Science & Machine Learning Enthusiast
